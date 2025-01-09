@@ -39,7 +39,7 @@ To ensure that the `env` object from `(await getCloudflareContext()).env` above 
 npx wrangler types --experimental-include-runtime
 ```
 
-This will generate a `d.ts` file and (by default) save it to `.wrangler/types/runtime.d.ts`. You will be prompted in the command's output to add that file to your `tsconfig.json`'s `compilerOptions.types` array.
+This will generate a `d.ts` file and (by default) save it to `.wrangler/types/runtime.d.ts`. It will also generate a `worker-configuration.d.ts` in your top-level directory. You will want to add these files to your `tsconfig.json`'s `compilerOptions.types` array.
 
 If you would like to commit the file to git, you can provide a custom path. Here, for instance, the `runtime.d.ts` file will be saved to the root of your project:
 
